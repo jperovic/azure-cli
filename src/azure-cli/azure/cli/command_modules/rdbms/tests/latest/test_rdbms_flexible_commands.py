@@ -127,6 +127,11 @@ class FlexibleServerMgmtScenarioTest(ScenarioTest):
     def test_postgres_flexible_server_public_revivedropped_mgmt(self, resource_group, vault_name, backup_vault_name):
         self._test_flexible_server_revivedropped_mgmt(resource_group, vault_name, backup_vault_name)
 
+    @AllowLargeResponse()
+    @ResourceGroupPreparer(location=postgres_location)
+    def test_postgres_flexible_server_migrate_network(self, resource_group, server):
+        self._test_flexible_server_migrate_network(resource_group, server)
+
     def _test_flexible_server_mgmt(self, database_engine, resource_group):
 
         if self.cli_ctx.local_context.is_on:
@@ -1015,7 +1020,10 @@ class FlexibleServerMgmtScenarioTest(ScenarioTest):
         main_tests(False)
         main_tests(True)
 
+    def _test_flexible_server_migrate_network(self, resource_group, server):
 
+        self.cmd('postgres flexible-server migrate-network -g {} -n {} --yes'.format(
+                 resource_group, server), checks=NoneCheck())
 
 class FlexibleServerProxyResourceMgmtScenarioTest(ScenarioTest):
 

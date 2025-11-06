@@ -201,7 +201,7 @@ def load_flexibleserver_command_table(self, _):
     with self.command_group('postgres flexible-server', postgres_flexible_migrations_sdk,
                             custom_command_type=flexible_servers_custom_postgres,
                             client_factory=cf_postgres_flexible_migrations) as g:
-        g.custom_command('migrate-network', 'flexible_server_migrate_network')
+        g.custom_command('migrate-network', 'flexible_server_migrate_network', confirmation=True)
 
     with self.command_group('postgres flexible-server db', postgres_flexible_db_sdk,
                             custom_command_type=flexible_server_custom_common,

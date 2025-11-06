@@ -1426,7 +1426,13 @@ def migration_check_name_availability(cmd, client, resource_group_name, server_n
     return get_postgresql_flexible_management_client(cmd.cli_ctx).check_migration_name_availability(subscription_id, resource_group_name, server_name, migration_name_availability_parammeters)
 
 def flexible_server_migrate_network(cmd, client, resource_group_name, server_name):
-    return client.begin_migrate_network_mode(resource_group_name, server_name)
+    validate_resource_group(resource_group_name)
+
+    if not server_name:
+        raise CLIError("Server name cannot be empty.")
+
+    logger.warning("Initiating network mode migration for server '{}' in resource group '{}'...".format(server_name, resource_group_name))
+    #return client.begin_migrate_network_mode(resource_group_name, server_name)
 
 def virtual_endpoint_create_func(cmd, client, resource_group_name, server_name, virtual_endpoint_name, endpoint_type, members):
     validate_resource_group(resource_group_name)

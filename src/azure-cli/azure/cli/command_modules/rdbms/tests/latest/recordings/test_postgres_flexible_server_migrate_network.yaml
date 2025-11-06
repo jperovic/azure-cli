@@ -1,0 +1,61 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - migrate-network
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '256'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - -g -n
+      User-Agent:
+      - AZURECLI/2.78.0 azsdk-python-core/1.35.0 Python/3.9.13 (Windows-10-10.0.26200-SP0)
+    method: POST
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.DBforPostgreSQL/flexibleServers/testserver/migrateNetwork?api-version=2026-01-01-preview
+  response:
+    body:
+      string: '{"CustomerSubscriptionId": "00000000-0000-0000-0000-000000000000","CustomerResourceGroup": "clitest.rg000001","ServerName": "testserver"}'
+    headers:
+      azure-asyncnotification:
+      - Enabled
+      azure-asyncoperation:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.DBforPostgreSQL/locations/centralindia/operations/c24570b5-1e11-44d5-9d81-9f71a1160035?api-version=2026-01-01-preview&t=638968502997195791&c=MIIIrzCCBpegAwIBAgITUQFAksjJXtdW64QOrwABAUCSyDANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDQwHhcNMjUxMDIyMTEzMDMzWhcNMjYwNDIwMTEzMDMzWjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANIL_ea4PX6tqxHLVF9EMduSXtibVvw_fvJo_2qVyVM_8guCpW7Vot8hAA3JXqJIuYF9h5wn2uWRXZXHyg4aaY2Lbqro1-tBMPU5rXoQZ9s2duM-rKR95C5eA8BbDTDoKjSTOnLAQ0-XWJI1upgmi1VDBnjo6o_RupQR7IimcAZdXrMl2LaN3lNyuldWaC5acWcw9L9ufxDGPdkfvUv_ScXQ-7BzgPXRS1UL7WyL9EV4bddWXpBBvZR80DH6tdfzz9pgHF4OIeUvSVm4QmcCVH5iCmbnVWDBGlhA1O6UBgUfxqnljc5MhLkkKH5OHPspPmRrsDTzYP15yZWFI82YMNECAwEAAaOCBJwwggSYMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHkBggrBgEFBQcBAQSCAdYwggHSMGgGCCsGAQUFBzAChlxodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvbWVsMDFwa2lpbnRjYTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNydDBYBggrBgEFBQcwAoZMaHR0cDovL2NybDEuYW1lLmdibC9haWEvbWVsMDFwa2lpbnRjYTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNydDBYBggrBgEFBQcwAoZMaHR0cDovL2NybDIuYW1lLmdibC9haWEvbWVsMDFwa2lpbnRjYTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNydDBYBggrBgEFBQcwAoZMaHR0cDovL2NybDMuYW1lLmdibC9haWEvbWVsMDFwa2lpbnRjYTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNydDAdBgNVHQ4EFgQUxuJ8b7tUVxxF9Uh_S-aQfmEWkyswDgYDVR0PAQH_BAQDAgWgMIIBNQYDVR0fBIIBLDCCASgwggEkoIIBIKCCARyGQmh0dHA6Ly9jcmwubWljcm9zb2Z0LmNvbS9wa2lpbmZyYS9DUkwvQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNybIY0aHR0cDovL2NybDEuYW1lLmdibC9jcmwvQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNybIY0aHR0cDovL2NybDIuYW1lLmdibC9jcmwvQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNybIY0aHR0cDovL2NybDMuYW1lLmdibC9jcmwvQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNybIY0aHR0cDovL2NybDQuYW1lLmdibC9jcmwvQU1FJTIwSW5mcmElMjBDQSUyMDA0KDEpLmNybDCBnQYDVR0gBIGVMIGSMAwGCisGAQQBgjd7AQEwZgYKKwYBBAGCN3sCAjBYMFYGCCsGAQUFBwICMEoeSAAzADMAZQAwADEAOQAyADEALQA0AGQANgA0AC0ANABmADgAYwAtAGEAMAA1ADUALQA1AGIAZABhAGYAZgBkADUAZQAzADMAZDAMBgorBgEEAYI3ewMCMAwGCisGAQQBgjd7BAIwHwYDVR0jBBgwFoAUOXFdqRUQLcTffi9ZbkBNwN_vNpowHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA0GCSqGSIb3DQEBCwUAA4ICAQAm6ZIl-5JrU83aixl875_xu7AqUHCqv_i3nKCtjfGKmpGgizLsa4kt_p3sPApiqvF1Dv2p794N5czXWs9tOGrxIc4GO-YqMXcmdfuHAqfZw5zC8MaiJookTLex3yd4ExrGtH_UmV0RpxDfCTGIQTr7WP2q8veI5fYj2_EMzKkQmV8e8Xk8cHxiF3jLky9mihEvMKDMpOD2pHPNTUCHJcJaa7R6JpDqlmCjL7JHM_NPpLqJfERsYRMtyRsCXN7t2KDTMPTrD2X20__M_mBZUtDWSM4dq0TlSx6WYVZT6Hs4i2x7WVBm5GbpznQ7uULBH9s2tTlhBC4bKAEw72WrrUU-7N7sWw7lKj8GApdoKrpLVE1w41qQFcEBK_NNYcSmxpQqpxh1kmr4V5MRCdDYpavRe8RRg2kwY8nsu_p-aqHv1RIyPyLK6_Iv7VuL0fIzayygFC7rH1C4_-iB7BJRQZuMq_QF_GJe9i6k6M406KA4BsbrDZSRPSg_128fdWkocAxaC-VECmyOEBjomZ_zYc6ka_Q45Fj57OCFxXHLzlsGjlgQ3AyWGAhYhgGJ7v6HyOr5aElWz6Q533UvtLmH3JtIwMsiR-0L_a8Whyd39suFwhJ4xIYQXoewMTAhl8-mg_v6OqSjnHwZRfGDzMQrQGaiYJDE0p1oWz4E9CUEp2qmzw&s=Jo7ZfvfTge0jn8wBE1dX2ramudIwu9OxTuI8kLhq0kJ3J7qijc8zA0bI1DRX2WpoAV8nRG5IdUdvueAGsEQyPCNmNqEz5CLkch5xYIKyqdO_rRLzud1xggGzc8PtvJXzz6mGY4m3wyi3YdX01aEtNZTVaaAYUVFD04hIBhtMiiJb1qOKnGbyKWaG6hGdeN53QtGYSp6eydROq-VqV3gtV0GDEps9nR15Fmq1rkizAnj5J-AV3XZkZ7G0i8XkEBtoXzUsDTxT31LZsfAnSmSpX6ywfk_bGwf3ShVLAjb2p6BriBMAEyNb5zs4Wh5FBhKvZuSJggdOPGSCPLiwyFSNww&h=WX8f8ggU0v8XignAWZYKYJDqIZGCEj4q_rDZ3iNjheY
+      cache-control:
+      - no-cache
+      content-length:
+      - '1073'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 23 Oct 2025 21:04:59 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-cache:
+      - CONFIG_NOCACHE
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - 676fe66c-710e-4aff-9ee4-c73cf89013a8
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=15659232-7461-4854-b909-7dff9a1e844c/westeurope/bb688c87-4948-48a5-9bfb-75df569a22c0
+      x-ms-ratelimit-remaining-subscription-global-writes:
+      - '11999'
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '799'
+      x-msedge-ref:
+      - 'Ref A: 62D489DE4B4E490A99A96F0208791BAE Ref B: AMS231020512009 Ref C: 2025-10-23T21:04:55Z'
+    status:
+      code: 200
+      message: ''
