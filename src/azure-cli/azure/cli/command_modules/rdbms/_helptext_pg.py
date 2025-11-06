@@ -1217,10 +1217,10 @@ examples:
     text: az postgres flexible-server index-tuning list-recommendations -g testgroup -s testsvr --recommendation-type CreateIndex
 """
 
-helps['postgres flexible-server migrate-server'] = """
+helps['postgres flexible-server migrate-network'] = """
 type: command
 short-summary: Migrate a PostgreSQL flexible server to Private Endpoint network mode
 examples:
   - name: Migrate a PostgreSQL flexible server network mode to Private Endpoint.
-    text: az postgres flexible-server migrate-server -g testgroup -s testsvr
+    text: az postgres flexible-server migrate-network -g testgroup -s testsvr
 """
