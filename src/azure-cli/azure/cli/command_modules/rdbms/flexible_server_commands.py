@@ -198,6 +198,11 @@ def load_flexibleserver_command_table(self, _):
         g.custom_command('list-skus', 'flexible_list_skus', table_transformer=postgres_table_transform_output_list_skus)
         g.custom_command('show-connection-string', 'flexible_server_connection_string')
 
+    with self.command_group('postgres flexible-server', postgres_flexible_migrations_sdk,
+                            custom_command_type=flexible_servers_custom_postgres,
+                            client_factory=cf_postgres_flexible_migrations) as g:
+        g.custom_command('migrate-network', 'flexible_server_migrate_network')
+
     with self.command_group('postgres flexible-server db', postgres_flexible_db_sdk,
                             custom_command_type=flexible_server_custom_common,
                             client_factory=cf_postgres_flexible_db) as g:
