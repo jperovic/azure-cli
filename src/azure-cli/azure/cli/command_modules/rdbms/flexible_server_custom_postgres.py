@@ -1431,7 +1431,7 @@ def flexible_server_migrate_network(cmd, client, resource_group_name, server_nam
     if not server_name:
         raise RequiredArgumentMissingError("Server name cannot be empty.")
 
-    logger.warning("Initiating Private Endpoint network mode migration for server '{}' in resource group '{}'...".format(server_name, resource_group_name))
+    logger.warning("Initiating Private Endpoint network mode migration for server '%s' in resource group '%s'...", server_name, resource_group_name)
 
     return client.begin_migrate_network_mode(resource_group_name, server_name)
 
@@ -2001,4 +2001,3 @@ class DbContext:
         self.command_group = command_group
         self.server_client = server_client
         self.location = location
-
